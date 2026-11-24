@@ -1,0 +1,6 @@
+.vscode
+*.o
+*.exe
+tape-translator
+char2tape
+tape2char
