@@ -223,7 +223,7 @@ int main(int argc, char **argv) {
     /* 整体累加和（覆盖头 + 段表 + 镜像体，不含校验尾）。 */
     uint32_t checksum = 0;
     for (uint32_t w = 0; w < total_words - 1u; w++) {
-        checksum = (checksum + img_sum_word(words[w])) & IMG_VALUE_MASK;
+        checksum = (checksum + img_sum_word(words[w])) & IMG_SUM_MASK;
     }
     words[total_words - 1u] = checksum;
 

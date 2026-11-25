@@ -32,6 +32,9 @@
 #define IMG_WORDS          4096u /* 12 位地址空间字数 */
 #define IMG_VALUE_MASK     0x3fffffffu
 #define IMG_SIGN_BIT       0x40000000u
+/* 校验和累加掩码：mod 2^31（保留 bit30 符号位空间；bit31 预留恒 0）。
+ * 注意区别于 IMG_VALUE_MASK（数据字低 30 位数值域掩码）；校验和两侧必须同口径。 */
+#define IMG_SUM_MASK       0x7fffffffu
 
 /* 段类型枚举（不设栈段）。 */
 #define SEG_PROG           0u   /* 程序段 */
